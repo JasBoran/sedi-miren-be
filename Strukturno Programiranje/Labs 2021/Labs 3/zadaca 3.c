@@ -73,7 +73,7 @@ int main()
     else
         razlika = n - kolega;
     
-    printf("%.4f", razlika / n * 100.0f);
+    printf("%.4f%%", razlika / n * 100.0f);
 
     return 0;
 }
