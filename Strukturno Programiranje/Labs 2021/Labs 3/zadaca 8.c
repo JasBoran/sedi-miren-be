@@ -10,7 +10,7 @@
     
 For Example:
 Input: 29 02 2140
-Output: DA
+Output: DA!
 */
 
 #include <stdio.h>
