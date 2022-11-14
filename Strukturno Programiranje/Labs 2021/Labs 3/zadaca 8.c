@@ -14,43 +14,38 @@ Output: DA
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(){
-    int d,m,y;
-    scanf("%d%d%d",&d,&m,&y);
-    if(m<0 || m>12){
-        printf("NE");
-        return 0;
+int main()
+{
+    int d,m,g;
+    scanf("%d %d %d",&d,&m,&g);
+
+    if((m==1 || m== 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)&& (d>= 0 &&d<=31) )
+    {
+            printf("DA");
     }
-    if(m<8 && m%2==1 && (d>31 || d<0)){
-        printf("NE");
-        return 0;
+
+    else if((m==4 || m== 6 || m == 9 || m == 11) && (d>= 0 &&d<=30))
+    {
+            printf("DA");
     }
-    if(m<8 && m%2==0 && (d>30 || d<0)){
-        printf("NE");
-        return 0;
-    }
-    if(m>=8 && m%2==1 && (d>30 || d<0)){
-        printf("NE");
-        return 0;
-    }
-    if(m>=8 && m%2==0 && (d>31 || d<0)){
-        printf("NE");
-        return 0;
-    }
-    if(!(y%4==0 && y%100!=0) && y%400!=0){
-        if(m==2 && d>28){
-            printf("NE");
-            return 0;
+
+    else if (m == 2)
+    {
+        if(g%400==0 || (g%4==0 && g%100!=0) && (d<=29))
+        {
+            printf("DA");
         }
-    }else{
-        if(m==2 && d>29){
+        else
+        {
             printf("NE");
-            return 0;
         }
     }
-    printf("DA");
-
+    else
+    {
+        printf("NE");
+    }
 
     return 0;
 }
