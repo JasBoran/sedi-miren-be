@@ -12,3 +12,20 @@ int main()
     printf("Ostatok pri delenje so 8 e: %d",19%8);
     return 0;
 }
+
+/*
+Или може и вака:
+
+#include <stdio.h>
+
+int main()
+{
+    int x = 19;
+    printf("Ostatok pri delenje so 2 e: %d\n",x%2);
+    printf("Ostatok pri delenje so 3 e: %d\n",x%3);
+    printf("Ostatok pri delenje so 5 e: %d\n",x%5);
+    printf("Ostatok pri delenje so 8 e: %d",x%8);
+    return 0;
+}
+
+*/
