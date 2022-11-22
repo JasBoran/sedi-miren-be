@@ -27,5 +27,4 @@ int main()
     printf("Ostatok pri delenje so 8 e: %d",x%8);
     return 0;
 }
-
 */
