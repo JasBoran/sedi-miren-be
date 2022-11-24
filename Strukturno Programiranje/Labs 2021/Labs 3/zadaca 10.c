@@ -24,7 +24,7 @@ int main() {
 
     if (SedmaCifra == 0 && ShestaCifra == 0 && PettaCifra == 0 && CetvrtaCifra == 0 && TretaCifra == 0 && VtoraCifra == 0 && PrvaCifra == 0 )
     {
-        printf("Nevaliden broj");       //Samo ovaa komanda ne raboti dobro neznam zasto, drugo sve raboti
+        printf("Nevaliden broj");       //Samo ovaa komanda ne raboti dobro neznam zasto, napisi primer: 1235000
     }
 
     if (SedumCifrenBroj%PrvaCifra==0 && SedumCifrenBroj%ZbirNaPretposlednaIPoslednaCifra!=0 && SedumCifrenBroj%VtoraCifra!=0)
