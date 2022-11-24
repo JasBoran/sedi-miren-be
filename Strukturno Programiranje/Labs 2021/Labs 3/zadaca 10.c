@@ -8,30 +8,30 @@ Input: 1234567
 Output: DA
 */
 
-#include <stdio.h> //Neznam zasto ne raboti na kompajlerot
+#include <stdio.h>
 
 int main() {
     int SedumCifrenBroj;
     scanf("%d",&SedumCifrenBroj);//1234567
     int PrvaCifra = SedumCifrenBroj / 1000000;
     int VtoraCifra = (SedumCifrenBroj / 100000) % 10;
-    int PretposlednaCifra = (SedumCifrenBroj / 10) % 10;
-    int PoslednaCifra = SedumCifrenBroj % 10;
-    int ZbirNaPretposlednaIPoslednaCifra = PretposlednaCifra + PoslednaCifra;
+    int TretaCifra = (SedumCifrenBroj / 10000) % 10;
+    int CetvrtaCifra = (SedumCifrenBroj / 1000) % 10;
+    int PettaCifra = (SedumCifrenBroj/ 100) % 10;
+    int ShestaCifra = (SedumCifrenBroj / 10) % 10;
+    int SedmaCifra = SedumCifrenBroj % 10;
+    int ZbirNaPretposlednaIPoslednaCifra = ShestaCifra + SedmaCifra;
 
-    if (PrvaCifra == 0 || VtoraCifra == 0 || ZbirNaPretposlednaIPoslednaCifra == 0 || SedumCifrenBroj == 0)
+    if (SedmaCifra == 0 && ShestaCifra == 0 && PettaCifra == 0 && CetvrtaCifra == 0 && TretaCifra == 0 && VtoraCifra == 0 && PrvaCifra == 0 )
     {
-        printf("Nevaliden broj");
+        printf("Nevaliden broj");       //Samo ovaa komanda ne raboti dobro neznam zasto, drugo sve raboti
     }
 
-    if (SedumCifrenBroj%PrvaCifra==0 && PrvaCifra%ZbirNaPretposlednaIPoslednaCifra!=0)
+    if (SedumCifrenBroj%PrvaCifra==0 && SedumCifrenBroj%ZbirNaPretposlednaIPoslednaCifra!=0 && SedumCifrenBroj%VtoraCifra!=0)
     {
         printf("DA");
     }
-    else if (SedumCifrenBroj%VtoraCifra==0 && PrvaCifra%ZbirNaPretposlednaIPoslednaCifra!=0)
-    {
-        printf("DA");
-    }
+
     else
     {
         printf("NE");
