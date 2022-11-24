@@ -8,4 +8,69 @@ Input: 1000
 Output: 9263.00
 */
 
-//neznam kje go updatenam
+#include <stdio.h>
+
+int main()
+{
+    double Cena, sum=0;
+    scanf("%lf", &Cena);
+
+    if(Cena>=500)
+    {
+        sum+=5 * 500;
+    }
+
+    else
+    {
+        sum+=5 * Cena;
+    }
+
+    Cena-=500;
+
+    if(Cena>0)
+    {
+        if(Cena>=150)
+        {
+            sum+=7.5 * 150;
+        }
+
+        else
+        {
+            sum+=7.5 * Cena;
+        }
+        Cena-=150;
+
+        if(Cena>0)
+        {
+            if(Cena>=200)
+            {
+                sum+=11 * 200;
+            }
+
+            else
+            {
+                sum+=11 * Cena;
+            }
+            Cena-=200;
+
+            if(Cena>0)
+            {
+                sum+=13.5 * Cena;
+            }
+        }
+    }
+
+    if(sum<7000)
+    {
+        sum*=1.10;
+    }
+
+    if(sum>7000)
+    {
+        sum*=1.18;
+    }
+    
+    printf("%.2lf", sum);
+
+    return 0;
+}
